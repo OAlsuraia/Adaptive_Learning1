@@ -1,0 +1,108 @@
+html{
+    scroll-behavior: smooth;
+    background-color: #F8F0E5;
+    text-decoration: none;
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Readex Pro', sans-serif;
+}
+.container{
+    width: 100%; 
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    height: 100vh; /* Set the container to take the full viewport height */
+    margin: 15px;
+}
+.content-left{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.content-right{
+    width: 30%;
+}
+.video {
+    background-color: black;
+    height: 500px;
+    margin-right: 15px;
+}
+.description {
+    display: flex;
+    background-color: #0F2C59;
+    height: 250px;
+    margin-right: 15px;
+    margin-top: 15px;
+    padding-right: 15px; 
+}
+.video-description {
+    flex: 1; 
+    text-align: right; 
+    padding: 15px;
+    color: #F8F0E5;
+}
+.video-info {
+    flex: 1;
+    text-align: left; 
+    padding-left: 45px;
+    color: #F8F0E5;
+  }
+.description .video-description h5{
+    color: #8c8986;
+}
+.description .video-description h2, h4{
+    color: #F8F0E5;
+}
+.select{
+    display: flex;
+    justify-content: space-around;
+    background-color: #0F2C59;
+}
+
+.chapters{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #DAC0A3;
+    height: 750px;
+    border-radius: 10px;
+}
+.content-right h2{
+    color: #F8F0E5;
+    height: 35px;
+}
+.chapters a div{
+    background-color: #90775a;
+    cursor: pointer;
+    height: 50px;
+    width: 95%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.quizzes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #DAC0A3;
+    height: 750px;
+    border-radius: 10px;
+}
+.content-right .quizzes a div{
+    background-color: #90775a;
+    cursor: pointer;
+    height: 50px;
+    width: 95%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
