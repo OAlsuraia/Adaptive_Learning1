@@ -1,0 +1,15 @@
+{
+  "name": "adaptive_learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Omar, Khalid, Abdullah, Abdulrahman",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "socket.io": "^4.7.3"
+  }
+}

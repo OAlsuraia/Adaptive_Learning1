@@ -1,0 +1,72 @@
+html{
+    scroll-behavior: smooth;
+    background-color: #F8F0E5;
+    text-decoration: none;
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Readex Pro', sans-serif;
+}
+.container{
+    width: 100%; 
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    text-align: right;
+    padding-bottom: 75px;
+    height: 100%;
+    width: 100%;
+}
+.title{
+    font-size: 50px;
+    padding-top: 25px;
+}
+.contact-us-box{
+    height: 500px;
+    width: 600px;
+    border-radius: 15px;
+    margin-top: 25px;
+    background-color: #DAC0A3;
+}
+.name-label{
+    margin-right: 50px;
+    margin-top: 35px;
+}
+.email-label{
+    margin-right: 50px;
+    margin-top: 15px;
+}
+.message-label{
+    margin-right: 50px;
+    margin-top: 15px;
+}
+.contact-us-box .name , .email{
+    text-align: right;
+    height: 30px;
+    margin-right: 50px;
+    width: 500px;
+}
+.contact-us-box .message{
+    text-align: right;
+    margin-right: 50px;
+    height: 100px;
+    width: 500px;
+}
+.contact-us-box button{
+    width: 150px;
+    height: 25px;
+    margin-right: 50px;
+    margin-top: 15px;
+    background-color: #4da454;
+    border-radius: 5px;
+    color: #ffffff;
+
+}

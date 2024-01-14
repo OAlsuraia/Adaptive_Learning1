@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../profile/profile.css">
+    <link rel="stylesheet" href="../navbar.css">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a87f431939.js" crossorigin="anonymous"></script>
+    <title>Software Engineering Project</title>
+</head>
+<body>
+    <div class="Contanier">
+        <div class="navbar">
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                  <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                    <path
+                          class="line top"
+                          d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                    <path
+                          class="line middle"
+                          d="m 30,50 h 40" />
+                    <path
+                          class="line bottom"
+                          d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                  </svg>
+                </label>
+                <ul class="active">
+                    <li><a href="../index-en.html">Home</a></li>
+                    <li><a href="../courses/course-en.html">Courses</a></li>
+                    <li><a href="../majors/major-en.html">Majors</a></li>
+                    <li><a href="../us/contact-us-en.html">Contact us</a></li>
+                    <li><a href="../profile/profile.html">العربية</a></li>
+                </ul>
+
+                <a class="heading" href="#">Adaptive Learning</a>
+
+            </nav>
+        </div>
+        <div class="main">   
+            <div class="sign-in">
+                <img src="../assets/abstract-user-flat-4.svg" width="65" height="65" class="user-icon">
+                <p1>Your Username</p1>
+                <p id="username">Ahmed152</p>
+                <p1>Your Email</p1>
+                <p id="email">Ahmed113@gmail.com</p>
+                <br>
+                <div class="badge">
+                    <header>
+                    <p1>Badges earned</p1>
+                </header>
+                <hr style="width: 100%;height: 3%;background-color: gray;">
+                <table>
+                    <tr align="center" >
+                        <th width="150"><button type="submit"><img src="../assets/Java.svg" width="65" height="65" ></button></th>
+                        <th width="150"><button type="submit"><img src="../assets/Data_structure.png" width="65" height="65" ></button></th>
+                        <th width="150"><button type="submit"><img src="../assets/software_engineering.svg" width="65" height="65" ></button></th>
+                    </tr>
+                    <tr align="center">
+                        <td>Java course</td>
+                        <td>Data structre</td>
+                        <td>Software Engineering</td>
+                    </tr>
+                </table>
+                </div>
+                <button id="logoutButton" type="button"><i class="fa-solid fa-arrow-right-from-bracket fa-sm"></i> Logout</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $.ajax({
+            url: "/api/info",
+            method: "GET",
+            success: (data) => {
+                console.log(data)
+                $("#username").text(data.username)
+                $("#email").text(data.email)
+            },
+            error: (err) => {
+                location.href = "/"
+            }
+        });
+
+        function removeCookie(name) {
+            document.cookie.split(";").forEach((c) => {
+                if (c.trim().startsWith(name + "=")) {
+                    document.cookie = c.replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`);
+                }
+            });
+        }
+        $("#logoutButton").click(() => {
+            removeCookie("api_key")
+            location.reload();
+        })
+    </script>
+</body> 
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../navbar.css" />
+    <link rel="stylesheet" href="../../majors/computer-sci/cs.css" />
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>CS</title>
+  </head>
+  <body>
+    <div class="Contanier">
+      <div class="navbar">
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn">
+            <svg
+              class="ham hamRotate ham1"
+              viewBox="0 0 100 100"
+              width="80"
+              onclick="this.classList.toggle('active')"
+            >
+              <path
+                class="line top"
+                d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+              />
+              <path class="line middle" d="m 30,50 h 40" />
+              <path
+                class="line bottom"
+                d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+              />
+            </svg>
+          </label>
+          <ul class="active">
+            <li>
+              <a href="../../signin/sign-In.html"
+                ><img
+                  src="../../assets/abstract-user-flat-4.svg"
+                  width="65"
+                  height="65"
+                  class="user-icon"
+              /></a>
+            </li>
+            <li><a href="../../index-en.html">Home</a></li>
+            <li><a href="../../courses/course-en.html">Courses</a></li>
+            <li><a href="../major-en.html">Majors</a></li>
+            <li><a href="../../us/contact-us-en.html">Contact us</a></li>
+            <li><a href="../computer-sci/cs.html">العربية</a></li>
+          </ul>
+
+          <a class="heading" href="#">Adaptive Learning</a>
+        </nav>
+      </div>
+      <main>
+        <h1 class="title">Computer Scinece</h1>
+        <div class="semester">
+          <h1>First Semester</h1>
+        </div>
+        <div class="mainWrapper">
+          <div class="content">
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>تراكيب محددة</h1>
+                  <h3>الرمز : عال 114</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels font-phone">
+                  <h1>مقدمة في برمجة الحاسبات</h1>
+                  <h3>الرمز : عال 150</h3>
+                  <h3>عدد الساعات : 4</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="semester">
+          <h1>Second Semester</h1>
+        </div>
+        <div class="mainWrapper">
+          <div class="content">
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels font-phone">
+                  <h1>البرمجة الشيئية</h1>
+                  <h3>الرمز : عال 151</h3>
+                  <h3>عدد الساعات : 4</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>تصميم المنطق الرقمي</h1>
+                  <h3>الرمز : عال 125</h3>
+                  <h3>عدد الساعات : 4</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>الأمن السيبراني والأخلاقيات</h1>
+                  <h3>الرمز : عال 180</h3>
+                  <h3>عدد الساعات : 2</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="semester">
+          <h1>Third Semester</h1>
+        </div>
+        <div class="mainWrapper">
+          <div class="content">
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>تراكيب بيانات</h1>
+                  <h3>الرمز : عال 252</h3>
+                  <h3>عدد الساعات : 4</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="semester">
+          <h1>Fourth Semester</h1>
+        </div>
+        <div class="mainWrapper">
+          <div class="content">
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>تراكيب محددة 2</h1>
+                  <h3>الرمز : عال 205</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>عمارة الحاسوب</h1>
+                  <h3>الرمز : عال 228</h3>
+                  <h3>عدد الساعات : 4</h3>
+                </div>
+              </div>
+            </div>
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>هندسة البرمجيات 1</h1>
+                  <h3>الرمز : عال 290</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="semester">
+          <h1>Fifth Semester</h1>
+        </div>
+        <div class="mainWrapper">
+          <div class="content">
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>تحليل وتصميم الخوارزميات</h1>
+                  <h3>الرمز : عال 216</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>انظمة التشغيل</h1>
+                  <h3>الرمز : عال 222</h3>
+                  <h3>عدد الساعات : 4</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="semester">
+          <h1>Sixth Semester</h1>
+        </div>
+        <div class="mainWrapper">
+          <div class="content">
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>شبكات الحاسب</h1>
+                  <h3>الرمز : عال 330</h3>
+                  <h3>عدد الساعات : 4</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>الذكاء الاصطناعي</h1>
+                  <h3>الرمز : عال 361</h3>
+                  <h3>عدد الساعات : 4</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>هندسة برمجيات 2</h1>
+                  <h3>الرمز : عال 392</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>مبادئ قواعد البيانات</h1>
+                  <h3>الرمز : عال 370</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="semester">
+          <h1>Seventh Semester</h1>
+        </div>
+        <div class="mainWrapper">
+          <div class="content">
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels font-phone">
+                  <h1>التفاعل بين الإنسان ،الحاسوب</h1>
+                  <h3>الرمز : عال 351</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>ندوة التطوير المهني</h1>
+                  <h3>الرمز : عال 383</h3>
+                  <h3>عدد الساعات : 2</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>أمن المعلومات</h1>
+                  <h3>الرمز : عال 334</h3>
+                  <h3>عدد الساعات : 4</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="semester">
+          <h1>Eighth Semester</h1>
+        </div>
+        <div class="mainWrapper">
+          <div class="content">
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>المترجمات</h1>
+                  <h3>الرمز : عال 445</h3>
+                  <h3>عدد الساعات : 4</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>مشروع التخرج</h1>
+                  <h3>الرمز : عال 495</h3>
+                  <h3>عدد الساعات : 2</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>النظم الموزعة</h1>
+                  <h3>الرمز : عال 427</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="semester">
+          <h1>Optional Subjects</h1>
+        </div>
+        <div class="mainWrapper">
+          <div class="content">
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>تعليم الاله</h1>
+                  <h3>الرمز : عال 364</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>معالجة اللغات الطبيعية</h1>
+                  <h3>الرمز : عال عال365</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels font-phone CS">
+                  <h1>الشبكات العصبية والتعليم العميق</h1>
+                  <h3>الرمز : عال 464</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>التحسين ،الأدلة العليا</h1>
+                  <h3>الرمز : عال 467</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card last-card">
+                <div class="levels">
+                  <h1>معالجة الصور الرقمية</h1>
+                  <h3>الرمز : عال 456</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card start-card">
+                <div class="levels font-phone">
+                  <h1>مواضيع مختارة في الذكاء الاصطناعي</h1>
+                  <h3>الرمز : عال 469</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mainWrapper">
+          <div class="content">
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>قواعد البيانات المتقدمة</h1>
+                  <h3>الرمز : عال 375</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>تطوير تطبيقات الويب</h1>
+                  <h3>الرمز : عال 346</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>تطوير تطبيقات الجوال</h1>
+                  <h3>الرمز : عال 447</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>تطوير تطبيقات الألعاب</h1>
+                  <h3>الرمز : عال 458</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card last-card">
+                <div class="levels font-phone">
+                  <h1 style="font-size: 11px">
+                    مواضيع مختارة في تطوير التطبيقات القائم
+                  </h1>
+                  <h3>الرمز : عال 449</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card start-card">
+                <div class="levels">
+                  <h1>الحوسبة السحابية</h1>
+                  <h3>الرمز : عال 335</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mainWrapper">
+          <div class="content">
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>أمن شبكات الحاسب</h1>
+                  <h3>الرمز : عال 337</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>أمن نظم التشغيل</h1>
+                  <h3>الرمز : عال 428</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels">
+                  <h1>أمن البرمجيات</h1>
+                  <h3>الرمز : عال 442</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card">
+                <div class="levels font-phone font-tall">
+                  <h1>مواضيع مختارة في الأمن السيبراني والشبكات</h1>
+                  <h3>الرمز : عال 443</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div onclick="activateItem(this)" class="card last-card">
+                <div class="levels">
+                  <h1>مشروع التخرج 2</h1>
+                  <h3>الرمز : عال 497</h3>
+                  <h3>عدد الساعات : 3</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script>
+    function activateItem(t) {
+      console.log(t.className.indexOf("activeItem"));
+      if (t.className.indexOf("activeItem") <= -1) {
+        t.className += " activeItem";
+      } else {
+        t.className = t.className.replace(" activeItem", " ");
+      }
+      prevItem = t;
+    }
+  </script>
+</html>
