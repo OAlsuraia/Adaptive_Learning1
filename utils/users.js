@@ -15,6 +15,7 @@ function comparePassword(password, hashedPassword) {
     });
 }
 
+
 function generateRandomUUID() {
     let result = "";
     let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -24,6 +25,7 @@ function generateRandomUUID() {
     return result;
 }
 
+
 async function generateAPIKey() {
     let api_key = generateRandomUUID();
     while(await knex("users").select("*").where({ api_key }).first()) {
@@ -32,10 +34,12 @@ async function generateAPIKey() {
     return api_key;
 }
 
+// Added function getUserByEmail - NEW
 async function getUserByEmail(email) {
     return knex("users").select("*").where({ email }).first();
 }
 
+// Added function isValidPassword - NEW
 async function isValidPassword(inputPassword, storedPassword) {
     try {
         return await comparePassword(inputPassword, storedPassword);
@@ -44,6 +48,7 @@ async function isValidPassword(inputPassword, storedPassword) {
     }
 }
 
+// Added function updateAPIKey - NEW
 async function updateAPIKey(email, newApiKey) {
     await knex("users").update({ api_key: newApiKey }).where({ email });
 }
@@ -68,6 +73,7 @@ module.exports = {
         }
     },
 
+    // Refactored checkUser function - EDITED
     async checkUser(email, password) {
         const user = await getUserByEmail(email);
         if (!user) return false;
