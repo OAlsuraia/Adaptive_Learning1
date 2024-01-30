@@ -32,6 +32,22 @@ async function generateAPIKey() {
     return api_key;
 }
 
+async function getUserByEmail(email) {
+    return knex("users").select("*").where({ email }).first();
+}
+
+async function isValidPassword(inputPassword, storedPassword) {
+    try {
+        return await comparePassword(inputPassword, storedPassword);
+    } catch {
+        return false;
+    }
+}
+
+async function updateAPIKey(email, newApiKey) {
+    await knex("users").update({ api_key: newApiKey }).where({ email });
+}
+
 module.exports = {
     async createUser(username, password, email) {
         const data = await knex("users").select("*").where({ username }).first();
@@ -51,23 +67,20 @@ module.exports = {
             return api_key;
         }
     },
+
     async checkUser(email, password) {
-        const data = await knex("users").select("*").where({ email }).first();
-        if(data) {
-            const hashedPassword = data.password;
-            try {
-                const api_key = await generateAPIKey();
-                const result = await comparePassword(password, hashedPassword);
-                if(result) await knex("users").update({ api_key }).where({ email });
-                
-                return api_key;
-            } catch {
-                return false;
-            }
-        } else {
-            return false;
-        }
+        const user = await getUserByEmail(email);
+        if (!user) return false;
+
+        const isValid = await isValidPassword(password, user.password);
+        if (!isValid) return false;
+
+        const newApiKey = await generateAPIKey();
+        await updateAPIKey(email, newApiKey);
+
+        return newApiKey;
     },
+
     async checkByAPIKey(api_key) {
         const data = await knex("users").select("*").where({ api_key }).first();
         if(data) {
@@ -76,4 +89,4 @@ module.exports = {
             return false;
         }
     }
-}
+};
